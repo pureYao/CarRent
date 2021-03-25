@@ -7,10 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="CarRent" />
+        <module name="car-rent-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="car-rent-service" target="8" />
       <module name="CarRent" target="1.7" />
     </bytecodeTargetLevel>
   </component>
