@@ -66,7 +66,7 @@ export const constantRoutes = [
       {
         path: 'users',
         name: 'Users',
-        component: () => import('@/views/table/index'),
+        component: () => import('@/views/user/index'),
         meta: { title: '用户管理', icon: 'peoples' }
       }
     ]
@@ -79,7 +79,7 @@ export const constantRoutes = [
       {
         path: 'car',
         name: 'Car',
-        component: () => import('@/views/form/index'),
+        component: () => import('@/views/car/index'),
         meta: { title: '车辆管理', icon: 'tree' }
       }
     ]
@@ -92,7 +92,7 @@ export const constantRoutes = [
       {
         path: 'rent',
         name: 'Rent',
-        component: () => import('@/views/form/index'),
+        component: () => import('@/views/rent/index'),
         meta: { title: '租车信息管理', icon: 'form' }
       }
     ]
@@ -105,7 +105,7 @@ export const constantRoutes = [
       {
         path: 'setting',
         name: 'Setting',
-        component: () => import('@/views/form/index'),
+        component: () => import('@/views/setting/index'),
         meta: { title: '个人信息', icon: 'user' }
       }
     ]

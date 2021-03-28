@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/car-rent-web/vue-admin-template" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/main/webapp/vue-admin-template" vcs="Git" />
   </component>
 </project>
