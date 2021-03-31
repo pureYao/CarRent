@@ -85,6 +85,8 @@
           <el-switch
               v-model="form.isTrue"
               active-color="#13ce66"
+              active-text="是"
+              inactive-text="否"
               inactive-color="#ff4949">
           </el-switch>
         </el-form-item>

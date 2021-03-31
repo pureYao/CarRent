@@ -10,6 +10,9 @@
 
     <mappers>
         <mapper class="com.car.dao.AdminMapper"/>
+        <mapper class="com.car.dao.CarMapper"/>
+        <mapper class="com.car.dao.RentMapper"/>
+        <mapper class="com.car.dao.TenantMapper"/>
     </mappers>
 
 </configuration>

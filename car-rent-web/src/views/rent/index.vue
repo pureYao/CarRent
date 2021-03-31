@@ -72,7 +72,7 @@
         <template>
           <el-button
               size="mini"
-              @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+              @click="editRentForm=true">编辑</el-button>
           <el-button
               size="mini"
               type="danger"
@@ -80,6 +80,37 @@
         </template>
       </el-table-column>
     </el-table>
+    <el-dialog title="编辑车辆" :visible.sync="editRentForm">
+      <el-form :model="form">
+        <el-form-item label="用户身份证号" :label-width="formLabelWidth">
+          <el-input v-model="form.t_id" autocomplete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="车牌" :label-width="formLabelWidth">
+          <el-input v-model="form.c_id" autocomplete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="租借时间" :label-width="formLabelWidth">
+          <el-date-picker
+              v-model="form.start_time"
+              type="date"
+              placeholder="选择日期">
+          </el-date-picker>
+        </el-form-item>
+        <el-form-item label="租借天数" :label-width="formLabelWidth">
+          <el-input v-model="form.rest_time" autocomplete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="租赁状态" :label-width="formLabelWidth">
+          <el-switch
+              v-model="form.rent_status"
+              active-text="租赁中"
+              inactive-text="已结束">
+          </el-switch>
+        </el-form-item>
+      </el-form>
+      <div slot="footer" class="dialog-footer">
+        <el-button @click="editRentForm = false">取 消</el-button>
+        <el-button type="primary" @click="editRentForm = false">确 定</el-button>
+      </div>
+    </el-dialog>
   </div>
 </template>
 
@@ -111,7 +142,16 @@ export default {
       },{
         value: 'false',
         label: '已结束'
-      }]
+      }],
+      form:{
+        c_id:'',
+        t_id:'',
+        start_time:'',
+        rest_time:'',
+        rent_status:''
+      },
+      formLabelWidth: '120px',
+      editRentForm:false
     }
   },
   created() {
